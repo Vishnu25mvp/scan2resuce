@@ -1,0 +1,360 @@
+.sticker-open-button {
+  margin-top: 10px;
+}
+
+.sticker-editor-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  overflow-y: auto;
+  background: rgba(0, 0, 0, .78);
+}
+
+.sticker-editor {
+  display: grid;
+  grid-template-columns: minmax(300px, 360px) minmax(260px, 1fr);
+  width: min(100%, 900px);
+  min-height: 540px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, .12);
+  border-radius: 10px;
+  background: #111820;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, .5);
+}
+
+.sticker-editor-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 22px;
+}
+
+.sticker-editor-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid rgba(255, 255, 255, .09);
+}
+
+.sticker-editor-header h2 {
+  margin-top: 4px;
+  color: #f9fafb;
+  font-size: 19px;
+}
+
+.sticker-editor-header p {
+  margin-top: 5px;
+  color: #9ca3af;
+  font-size: 12px;
+  overflow-wrap: anywhere;
+}
+
+.sticker-editor-eyebrow,
+.sticker-preview-caption {
+  color: #f87171;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.sticker-close-button {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  flex: 0 0 auto;
+  border: 1px solid rgba(255, 255, 255, .12);
+  border-radius: 6px;
+  color: #d1d5db;
+  background: rgba(255, 255, 255, .04);
+  cursor: pointer;
+}
+
+.sticker-control-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sticker-control-label {
+  color: #cbd5e1;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.sticker-segmented {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 6px;
+}
+
+.sticker-segmented button {
+  min-height: 48px;
+  padding: 7px 4px;
+  border: 1px solid rgba(255, 255, 255, .12);
+  border-radius: 6px;
+  color: #d1d5db;
+  background: rgba(255, 255, 255, .035);
+  cursor: pointer;
+  font: inherit;
+  font-size: 12px;
+}
+
+.sticker-segmented button small {
+  display: block;
+  margin-top: 3px;
+  color: #9ca3af;
+  font-size: 10px;
+}
+
+.sticker-segmented button.selected {
+  border-color: #f87171;
+  color: #fff;
+  background: rgba(239, 68, 68, .13);
+}
+
+.sticker-swatches {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.sticker-swatches button {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+}
+
+.sticker-swatches button.selected {
+  border-color: #fff;
+}
+
+.sticker-swatches button span {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--swatch-color);
+}
+
+.sticker-option {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #d1d5db;
+  font-size: 12px;
+}
+
+.sticker-option input {
+  width: 16px;
+  height: 16px;
+  accent-color: #ef4444;
+}
+
+.sticker-privacy-note {
+  color: #9ca3af;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.sticker-editor-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: auto;
+  padding-top: 10px;
+}
+
+.sticker-preview-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  min-width: 0;
+  padding: 28px;
+  background: #0b1016;
+}
+
+.sticker-preview-caption {
+  color: #9ca3af;
+}
+
+.sticker-print-preview {
+  display: flex;
+  width: var(--sticker-size);
+  height: var(--sticker-size);
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2.5%;
+  overflow: hidden;
+  padding: 5%;
+  border: 1px solid #d1d5db;
+  border-top: 7px solid var(--sticker-accent);
+  border-radius: 3mm;
+  color: #111827;
+  background: #fff;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, .35);
+  text-align: center;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+.sticker-brand-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  width: 100%;
+  color: var(--sticker-accent);
+  line-height: 1.05;
+}
+
+.sticker-brand-mark {
+  display: grid;
+  place-items: center;
+}
+
+.sticker-brand-row strong,
+.sticker-brand-row span {
+  display: block;
+}
+
+.sticker-brand-row strong {
+  font-size: clamp(9px, 1.7vw, 13px);
+}
+
+.sticker-brand-row span {
+  margin-top: 2px;
+  font-size: clamp(5px, .9vw, 7px);
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+.sticker-qr-frame {
+  display: grid;
+  place-items: center;
+  width: 72%;
+  min-height: 0;
+  flex: 1;
+}
+
+.sticker-qr-frame canvas {
+  display: block;
+  width: 100% !important;
+  height: auto !important;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.sticker-print-label {
+  color: var(--sticker-accent);
+  font-size: clamp(8px, 1.6vw, 12px);
+  line-height: 1.1;
+  overflow-wrap: anywhere;
+}
+
+.sticker-private-detail {
+  color: #374151;
+  font-size: clamp(6px, 1vw, 8px);
+  line-height: 1.05;
+}
+
+.sticker-footer {
+  color: #6b7280;
+  font-size: clamp(5px, .9vw, 7px);
+  line-height: 1.05;
+}
+
+@media (max-width: 720px) {
+  .sticker-editor-backdrop {
+    place-items: start center;
+    padding: 10px;
+  }
+
+  .sticker-editor {
+    grid-template-columns: 1fr;
+    max-width: 460px;
+  }
+
+  .sticker-preview-area {
+    min-height: 340px;
+    padding: 22px;
+  }
+}
+
+@page {
+  margin: 0;
+}
+
+@media print {
+  html,
+  body,
+  #root {
+    width: 100%;
+    min-height: 0;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: visible !important;
+    background: #fff !important;
+  }
+
+  body * {
+    visibility: hidden !important;
+  }
+
+  .sticker-editor-backdrop,
+  .sticker-editor-backdrop * {
+    visibility: visible !important;
+  }
+
+  .sticker-editor-backdrop {
+    position: static !important;
+    display: block !important;
+    padding: 0 !important;
+    overflow: visible !important;
+    background: transparent !important;
+  }
+
+  .sticker-editor {
+    display: block !important;
+    width: auto !important;
+    min-height: 0 !important;
+    overflow: visible !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+  }
+
+  .sticker-editor-controls,
+  .sticker-preview-caption {
+    display: none !important;
+  }
+
+  .sticker-preview-area {
+    display: block !important;
+    min-height: 0 !important;
+    padding: 0 !important;
+    background: transparent !important;
+  }
+
+  .sticker-print-preview {
+    position: fixed !important;
+    top: 10mm !important;
+    left: 10mm !important;
+    width: var(--sticker-size) !important;
+    height: var(--sticker-size) !important;
+    margin: 0 !important;
+    border-radius: 3mm !important;
+    box-shadow: none !important;
+  }
+}

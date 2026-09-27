@@ -1,0 +1,45 @@
+.public-page { min-height: 100vh; max-width: 980px; margin: 0 auto; padding: 0 22px 40px; color: #f9fafb; }
+.public-header { min-height: 72px; display: flex; align-items: center; justify-content: space-between; gap: 14px; border-bottom: 1px solid rgba(255,255,255,.1); }
+.public-brand, .public-live, .public-section-heading, .public-owner-phone a, .public-resource-actions, .public-call { display: flex; align-items: center; }
+.public-brand { gap: 11px; }
+.public-brand strong, .public-brand span { display: block; }
+.public-brand strong { font-size: 15px; }
+.public-brand span, .public-eyebrow, .public-blood span, .public-details dt, .public-contact span, .public-location-note { color: #9ca3af; font-size: 10px; letter-spacing: 0; }
+.public-brand span { margin-top: 3px; }
+.public-mark { width: 38px; height: 38px; display: grid; place-items: center; color: white; background: #dc3e39; border-radius: 8px; }
+.public-live { gap: 8px; color: #cbd5e1; font-size: 12px; }
+.public-live i { width: 8px; height: 8px; border-radius: 50%; background: #39bd86; }
+.public-owner { display: flex; justify-content: space-between; gap: 20px; align-items: center; padding: 27px 0 24px; }
+.public-eyebrow { margin-bottom: 6px; color: #f06a64; font-weight: 700; }
+.public-owner h1 { font-size: clamp(26px, 6vw, 38px); line-height: 1.1; }
+.public-owner-phone { margin-top: 11px; }
+.public-owner-phone a { gap: 7px; color: #f9fafb; text-decoration: none; }
+.public-blood { min-width: 118px; padding: 12px; border: 1px solid rgba(240,106,100,.35); border-radius: 8px; text-align: center; background: rgba(229,57,53,.12); }
+.public-blood span, .public-blood strong { display: block; }
+.public-blood strong { margin-top: 4px; color: #ff827c; font-size: 20px; }
+.public-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.public-section { min-width: 0; padding: 17px; border: 1px solid rgba(255,255,255,.1); border-radius: 8px; background: rgba(255,255,255,.025); }
+.public-section-heading { gap: 9px; margin-bottom: 14px; color: #f06a64; }
+.public-section-heading h2 { color: #f9fafb; font-size: 15px; }
+.public-vehicle-mark { width: 20px; height: 20px; display: grid; place-items: center; border-radius: 5px; background: #424242; color: white; font-size: 12px; font-weight: 700; }
+.public-details { display: grid; gap: 12px; }
+.public-details dt { margin-bottom: 4px; }
+.public-details dd { color: #f9fafb; font-size: 14px; overflow-wrap: anywhere; }
+.public-contacts { margin-top: 14px; }
+.public-contact, .public-resource { display: flex; align-items: center; justify-content: space-between; gap: 14px; padding: 12px 0; border-top: 1px solid rgba(255,255,255,.08); }
+.public-contact strong, .public-resource strong { display: block; font-size: 14px; }
+.public-contact span { display: block; margin-top: 4px; }
+.public-call, .public-resource-actions a { gap: 6px; color: #f9fafb; text-decoration: none; font-size: 12px; font-weight: 700; }
+.public-call { min-height: 38px; padding: 0 11px; border-radius: 6px; background: #c93632; white-space: nowrap; }
+.public-nearby-title { margin: 25px 0 14px; }
+.public-resources { display: grid; }
+.public-resource p { margin-top: 4px; }
+.public-resource-actions { gap: 12px; flex-shrink: 0; }
+.public-resource-actions a { white-space: nowrap; }
+.public-muted { color: #9ca3af; font-size: 13px; line-height: 1.55; }
+.public-location-note { margin-top: 12px; }
+.public-state { padding: 24px 0; color: #cbd5e1; font-size: 14px; }
+.public-error { color: #ff827c; }
+.public-error p { margin-top: 6px; color: #cbd5e1; }
+.public-footer { padding: 24px 0 0; color: #6b7280; text-align: center; font-size: 11px; }
+@media (max-width: 620px) { .public-page { padding: 0 15px 28px; } .public-live { font-size: 0; gap: 0; } .public-live i { width: 9px; height: 9px; } .public-owner { align-items: flex-start; } .public-grid { grid-template-columns: 1fr; } .public-contact { align-items: flex-start; } .public-resource { flex-direction: column; align-items: flex-start; } .public-resource-actions { width: 100%; } }
